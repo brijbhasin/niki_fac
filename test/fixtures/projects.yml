@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  start_date: 2016-02-05 05:37:19
+  deliver_date: 2016-02-05 05:37:19
+  details: MyText
+  customer_id: 
+  last_stage_date: 2016-02-05 05:37:19
+
+two:
+  name: MyString
+  start_date: 2016-02-05 05:37:19
+  deliver_date: 2016-02-05 05:37:19
+  details: MyText
+  customer_id: 
+  last_stage_date: 2016-02-05 05:37:19
