@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :org_roles
+
   resources :customers
 
   resources :projects

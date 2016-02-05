@@ -1,0 +1,29 @@
+<h1>Listing org_roles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Manager</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @org_roles.each do |org_role| %>
+      <tr>
+        <td><%= org_role.name %></td>
+        <td><%= org_role.manager %></td>
+        <td><%= org_role.user %></td>
+        <td><%= link_to 'Show', org_role %></td>
+        <td><%= link_to 'Edit', edit_org_role_path(org_role) %></td>
+        <td><%= link_to 'Destroy', org_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Org role', new_org_role_path %>
