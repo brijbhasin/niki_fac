@@ -1,0 +1,15 @@
+<%= simple_form_for(@project_activity) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :start_date %>
+    <%= f.input :deliver_date %>
+    <%= f.association :project %>
+    <%= f.input :details %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

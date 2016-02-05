@@ -1,0 +1,33 @@
+<h1>Listing project_activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Start date</th>
+      <th>Deliver date</th>
+      <th>Project</th>
+      <th>Details</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project_activities.each do |project_activity| %>
+      <tr>
+        <td><%= project_activity.name %></td>
+        <td><%= project_activity.start_date %></td>
+        <td><%= project_activity.deliver_date %></td>
+        <td><%= project_activity.project %></td>
+        <td><%= project_activity.details %></td>
+        <td><%= link_to 'Show', project_activity %></td>
+        <td><%= link_to 'Edit', edit_project_activity_path(project_activity) %></td>
+        <td><%= link_to 'Destroy', project_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project activity', new_project_activity_path %>
