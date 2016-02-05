@@ -1,15 +1,34 @@
-<%= simple_form_for(@project_activity) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :start_date %>
-    <%= f.input :deliver_date %>
-    <%= f.association :project %>
-    <%= f.input :details %>
+<%= form_for @project_activity, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :start_date, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :start_date, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :deliver_date, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :deliver_date, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :details, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :details, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  project_activities_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
